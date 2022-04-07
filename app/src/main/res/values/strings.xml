@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HotelReservation_A00444846</string>
+    <string name="welcome_text">Welcome to Hotel Reservation System</string>
+    <string name="check_in_date">Check In Date</string>
+    <string name="no_of_guest">No of Guest</string>
+    <string name="search">Search</string>
+</resources>
