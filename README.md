@@ -1,7 +1,8 @@
 # HotelReservation_A00444846
 MCDA 5550
 
-Name: Pratik KAnubhai Katharotiya
+Name: Pratik Kanubhai Katharotiya
+
 A number: A00444846
 
 Source Code is for Android App of Hotel Reservation.
