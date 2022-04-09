@@ -12,15 +12,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginStart="10dp">
 
         <TextView
-            android:id="@+id/hotel_name_text_view"
+            android:id="@+id/hotel_name_title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Hotel Name"
+            android:text="@string/hotel_name_hotel_list"
             android:textSize="20sp"
             android:textColor="@color/black"/>
 
@@ -28,9 +28,9 @@
             android:id="@+id/price_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/hotel_name_text_view"
-            app:layout_constraintStart_toStartOf="@id/hotel_name_text_view"
-            android:text="Price"
+            app:layout_constraintTop_toBottomOf="@id/hotel_name_title_text_view"
+            app:layout_constraintStart_toStartOf="@id/hotel_name_title_text_view"
+            android:text="@string/price_hotel_list"
             android:textSize="20sp"
             android:textColor="@color/black"/>
 

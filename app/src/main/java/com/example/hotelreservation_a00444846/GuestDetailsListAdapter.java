@@ -4,18 +4,15 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
-
 public class GuestDetailsListAdapter extends RecyclerView.Adapter<GuestDetailsListAdapter.ViewHolder> {
 
-    private int numberOfGuests;
-    private LayoutInflater layoutInflater;
+    private final int numberOfGuests;
+    private final LayoutInflater layoutInflater;
     private ItemClickListener clickListener;
 
     GuestDetailsListAdapter(Context context, int numberOfGuests) {
@@ -32,7 +29,7 @@ public class GuestDetailsListAdapter extends RecyclerView.Adapter<GuestDetailsLi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        holder.guestNoTextView.setText("Guest " + (position + 1));
     }
 
     @Override
@@ -46,12 +43,11 @@ public class GuestDetailsListAdapter extends RecyclerView.Adapter<GuestDetailsLi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView guestNameTextView, guestGenderTextView;
-        EditText guestNameEditText;
+        TextView guestNoTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-//            guestNameTextView = itemView.findViewById(R.id.guest_name_text_view);
+            guestNoTextView = itemView.findViewById(R.id.guest_no_text_view);
 //            guestNameEditText = itemView.findViewById(R.id.guest_name_edit_text);
 //            guestGenderTextView = itemView.findViewById(R.id.gender_text_view);
 //            hotelPrice = itemView.findViewById(R.id.gender_radio_group);

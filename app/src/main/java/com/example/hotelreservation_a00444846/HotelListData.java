@@ -4,7 +4,7 @@ public class HotelListData {
 
     String hotel_name;
     int price;
-    Boolean availability;
+    boolean availability;
 
     public HotelListData(String hotel_name, int price, Boolean availability) {
         this.hotel_name = hotel_name;
@@ -28,7 +28,7 @@ public class HotelListData {
         this.price = price;
     }
 
-    public Boolean getAvailability() {
+    public boolean getAvailability() {
         return availability;
     }
 

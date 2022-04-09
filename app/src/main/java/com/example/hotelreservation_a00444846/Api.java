@@ -1,6 +1,7 @@
 package com.example.hotelreservation_a00444846;
 
 import retrofit.RestAdapter;
+import retrofit.client.OkClient;
 
 public class Api {
 

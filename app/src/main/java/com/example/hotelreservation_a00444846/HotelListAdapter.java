@@ -13,8 +13,8 @@ import java.util.List;
 
 public class HotelListAdapter extends RecyclerView.Adapter<HotelListAdapter.ViewHolder> {
 
-    private List<HotelListData> hotelListData;
-    private LayoutInflater layoutInflater;
+    private final List<HotelListData> hotelListData;
+    private final LayoutInflater layoutInflater;
     private ItemClickListener clickListener;
 
     HotelListAdapter(Context context, List<HotelListData> hotelListData) {
@@ -36,7 +36,7 @@ public class HotelListAdapter extends RecyclerView.Adapter<HotelListAdapter.View
         Boolean hotelAvailability = hotelListData.get(position).getAvailability();
 
         // set up the text
-        if(hotelAvailability){
+        if (hotelAvailability) {
             holder.hotelName.setText(hotelName);
             holder.hotelPrice.setText(String.valueOf(hotelPrice));
         }
@@ -61,7 +61,7 @@ public class HotelListAdapter extends RecyclerView.Adapter<HotelListAdapter.View
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            hotelName = itemView.findViewById(R.id.hotel_name_text_view);
+            hotelName = itemView.findViewById(R.id.hotel_name_title_text_view);
             hotelPrice = itemView.findViewById(R.id.price_text_view);
 
             itemView.setOnClickListener(this);

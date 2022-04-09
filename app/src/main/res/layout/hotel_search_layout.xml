@@ -31,7 +31,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/check_in_text_view"
+                android:id="@+id/check_in_title_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -45,25 +45,25 @@
                 android:id="@+id/check_in_date_picker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/check_in_text_view"
-                app:layout_constraintTop_toBottomOf="@id/check_in_text_view" />
+                app:layout_constraintStart_toStartOf="@+id/check_in_title_text_view"
+                app:layout_constraintTop_toBottomOf="@id/check_in_title_text_view" />
 
             <TextView
-                android:id="@+id/check_out_text_view"
+                android:id="@+id/check_out_title_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/check_in_date"
+                android:text="@string/check_out_date"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/check_in_text_view"
+                app:layout_constraintStart_toStartOf="@id/check_in_title_text_view"
                 app:layout_constraintTop_toBottomOf="@+id/check_in_date_picker" />
 
             <DatePicker
                 android:id="@+id/check_out_date_picker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@id/check_in_text_view"
-                app:layout_constraintTop_toBottomOf="@id/check_out_text_view" />
+                app:layout_constraintStart_toStartOf="@id/check_in_title_text_view"
+                app:layout_constraintTop_toBottomOf="@id/check_out_title_text_view" />
 
             <TextView
                 android:id="@+id/no_of_guest_text_view"
@@ -72,7 +72,7 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/no_of_guest"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/check_in_text_view"
+                app:layout_constraintStart_toStartOf="@+id/check_in_title_text_view"
                 app:layout_constraintTop_toBottomOf="@+id/check_out_date_picker" />
 
             <EditText
@@ -93,8 +93,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/search"
-                app:layout_constraintStart_toStartOf="@+id/check_in_text_view"
+                android:layout_marginTop="20sp"
+                app:layout_constraintStart_toStartOf="@+id/check_in_title_text_view"
                 app:layout_constraintTop_toBottomOf="@+id/no_of_guest_text_view" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:layout_marginStart="30sp"
+                app:layout_constraintStart_toEndOf="@+id/search_button"
+                app:layout_constraintTop_toTopOf="@+id/search_button"/>
+
+            <Button
+                android:id="@+id/restore_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/restore"
+                android:layout_marginStart="30sp"
+                app:layout_constraintStart_toEndOf="@+id/save_button"
+                app:layout_constraintTop_toTopOf="@+id/search_button"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

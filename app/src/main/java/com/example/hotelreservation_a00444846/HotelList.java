@@ -6,10 +6,10 @@ import java.util.List;
 
 public class HotelList {
 
+    @SerializedName("hotels_list")
+    private List<HotelListData> hotelListDataList;
+
     public List<HotelListData> getHotelListDataList() {
         return hotelListDataList;
     }
-
-    @SerializedName("hotels_list")
-    private List<HotelListData> hotelListDataList;
 }

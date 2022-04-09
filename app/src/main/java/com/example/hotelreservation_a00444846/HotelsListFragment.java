@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit.Callback;
@@ -26,7 +27,7 @@ public class HotelsListFragment extends Fragment implements ItemClickListener {
     View view;
     TextView headingTextView;
     ProgressBar progressBar;
-    List<HotelListData> hotelListResponseData;
+    List<HotelListData> hotelListResponseData = new ArrayList<>();
 
     @Nullable
     @Override
@@ -47,18 +48,23 @@ public class HotelsListFragment extends Fragment implements ItemClickListener {
         int numberOfGuests = getArguments().getInt("no_of_guest");
 
         //Set up the header
-        headingTextView.setText("Welcome User, displaying hotel for " + numberOfGuests + " guests staying from " + checkInDate +
+        headingTextView.setText("Welcome, displaying available hotels for " + numberOfGuests + " guests staying from " + checkInDate +
                 " to " + checkOutDate);
 
         getHotelsListsData();
     }
 
+
     private void getHotelsListsData() {
         progressBar.setVisibility(View.VISIBLE);
         Api.getClient().getHotelsLists(new Callback<HotelList>() {
             @Override
-            public void success(HotelList hotelList, Response response){
-                hotelListResponseData = hotelList.getHotelListDataList();
+            public void success(HotelList hotelList, Response response) {
+                for(HotelListData hotelListData :hotelList.getHotelListDataList()){
+                    if(hotelListData.getAvailability())
+                        hotelListResponseData.add(hotelListData);
+                }
+
                 setupRecyclerView();
             }
 
@@ -67,20 +73,6 @@ public class HotelsListFragment extends Fragment implements ItemClickListener {
                 Toast.makeText(getActivity(), error.toString(), Toast.LENGTH_LONG).show();
             }
         });
-//        Api.getClient().getHotelsLists(new Callback<List<HotelListData>>() {
-//            @Override
-//            public void success(List<HotelListData> hotelListResponseData, Response response) {
-//                hotelListResponseData = hotelListResponseData;
-//                setupRecyclerView();
-//
-//            }
-//
-//            @Override
-//            public void failure(RetrofitError error) {
-//                Toast.makeText(getActivity(), error.toString(), Toast.LENGTH_LONG).show();
-//
-//            }
-//        });
     }
 
     private void setupRecyclerView() {

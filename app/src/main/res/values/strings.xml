@@ -1,7 +1,24 @@
 <resources>
     <string name="app_name">HotelReservation_A00444846</string>
     <string name="welcome_text">Welcome to Hotel Reservation System</string>
-    <string name="check_in_date">Check In Date</string>
+    <string name="check_in_date">Please Select Check In Date</string>
     <string name="no_of_guest">No of Guest</string>
     <string name="search">Search</string>
+    <string name="thank_you">Thank you</string>
+    <string name="book_another">Book Another</string>
+    <string name="hotel_name_hotel_list">Hotel Name</string>
+    <string name="price_hotel_list">Price</string>
+    <string name="guest_name_guest_list">Guest Name :</string>
+    <string name="guest_name_guest_list_layout">Guest Name</string>
+    <string name="gender_guest_list_layout">Gender :</string>
+    <string name="male_guest_list_layout">Male</string>
+    <string name="female_guest_list_layout">Female</string>
+    <string name="hotel_name_guest_list_fragment">Hotel Name :</string>
+    <string name="check_in_date_guest_list_fragment">Check-In Date :</string>
+    <string name="check_out_date_guest_list_fragment">Check-Out Date :</string>
+    <string name="price_guest_list_fragment">Price :</string>
+    <string name="submit_button_guest_list_fragment">Submit</string>
+    <string name="check_out_date">Please Select Check Out Date</string>
+    <string name="save">Save</string>
+    <string name="restore">Restore</string>
 </resources>
